@@ -1,0 +1,51 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{user._id}}/website/{{website._id}}/page/{{page._id}}/widget" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="updateWidget(widgetId) " class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" href="#">
+     Image Widgets Edit
+    </a>
+  </div>
+</nav>
+
+<div class="container mypadding">
+  <form>
+    <div class="form-group">
+      <label for="image-text">Text</label>
+      <input type="text" class="form-control" id="image-text" [(ngModel)]="widget.text" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="image-URL">URL</label>
+      <input type="text" class="form-control" id="image-URL" [(ngModel)]="widget.url" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="image-width">Width</label>
+      <input type="text" class="form-control" id="image-width"[(ngModel)]="widget.width" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">Upload</label>
+      <input type="file" class="form-control" id="exampleInputFile">
+    </div>
+  </form>
+  <a class="btn btn-primary btn-block" routerLink="#">Upload Image</a>
+  <a class="btn btn-danger  btn-block" (click)="deleteWebsite(widget)">Delete</a>
+</div>
+
+<nav class="navbar navbar-fixed-bottom cl-blue-navbar">
+  <div class="container-fuild">
+    <a (click)="profile()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+  </div>
+</nav>

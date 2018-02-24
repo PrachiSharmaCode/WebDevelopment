@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{user._id}}/website/{{website._id}}/page/{{page._id}}/widget" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+
+    <a class="navbar-brand cl-text-white cl-text-bold" routerLink="#">
+      Choose Widget
+    </a>
+  </div>
+</nav>
+
+<div class="container-fluid cl-container-padding mypadding">
+  <ul class="list-group cl-list-group-borderless">
+    <li class="list-group-item cl-list-item-borderless">
+      <a routerLink="/profile/{{user._id}}/website/{{website._id}}/page/{{page._id}}/widget/new/newheader">Create Header</a>
+    </li>
+  </ul>
+</div>
+
+<nav class="navbar navbar-fixed-bottom cl-blue-navbar">
+  <div class="container-fuild">
+    <a (click)="profile()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+  </div>
+</nav>

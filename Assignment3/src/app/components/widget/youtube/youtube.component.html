@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{user._id}}/website/{{website._id}}/page/{{page._id}}/widget" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="updateWidget(widgetId) " class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" href="#">
+     YouTube Widgets Edit
+    </a>
+  </div>
+</nav>
+
+<div class="container mypadding">
+  <form>
+    <div class="form-group">
+      <label for="youtube-text">Text</label>
+      <input type="text" class="form-control" id="youtube-text" [(ngModel)]="widget.text" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="youtube-URL">URL</label>
+      <input type="text" class="form-control" id="youtube-URL" [(ngModel)]="widget.url" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="youtube-width">Width</label>
+      <input type="text" class="form-control" id="youtube-width" [(ngModel)]="widget.width" [ngModelOptions]="{standalone: true}">
+    </div>
+  </form>
+  <a class="btn btn-danger btn-block" (click)="deleteWebsite(widget)">Delete</a>
+</div>
+
+<nav class="navbar navbar-fixed-bottom cl-blue-navbar">
+  <div class="container-fuild">
+    <a (click)="profile()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+  </div>
+</nav>
