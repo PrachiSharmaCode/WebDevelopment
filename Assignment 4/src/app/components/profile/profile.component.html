@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<nav class="navTop">
+  <h3>Profile</h3>
+</nav>
+
+<div class="mypadding">
+
+</div>
+
+<form>
+  <div class="divStyle">
+    <label>Username</label>
+    <input type="text" class="form-control"  [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="divStyle">
+    <label>Email</label>
+    <input type="email" class="form-control" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="divStyle">
+    <label>First Name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.firstName" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="divStyle">
+    <label>Last Name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.lastName" [ngModelOptions]="{standalone: true}">
+  </div>
+
+  <!--<a (click)="website()" class="btn btn-primary btn-lg btn-block">Websites</a>-->
+  <a routerLink="/profile/{{user._id}}/website" class="btn btn-primary btn-lg btn-block">Websites</a>
+  <a (click)="updateUser(user)" class="btn btn-primary btn-lg btn-block">Update</a>
+  <!--<a (click)="logout()" class="btn btn-danger btn-lg btn-block">Logout</a>-->
+</form>
+
+
+
+<nav class="navBottom">
+
+</nav>
+
+
+

@@ -1,0 +1,19 @@
+
+<form #f="ngForm">
+  <h2>Login</h2>
+  <div class="divStyle">
+    <input type="text" class="form-control" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Username">
+  </div>
+  <div class="divStyle">
+    <input type="password" class="form-control" required [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password">
+  </div>
+  <button (click)="login(username,password)" type="submit" class="btn btn-primary btn-lg btn-block" formaction="profile">Login</button>
+  <button (click)="register()" type="submit" class="btn btn-success btn-lg btn-block" formaction="register">Register</button>
+</form>
+
+
+
+
+
+
+

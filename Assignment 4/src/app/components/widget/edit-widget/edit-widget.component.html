@@ -1,0 +1,29 @@
+<div class="container cl-container-padding mypadding">
+
+  <div [ngSwitch]="widgetType">
+
+    <div *ngSwitchCase="'YOUTUBE'">
+      <app-youtube></app-youtube>
+    </div>
+
+    <div *ngSwitchCase="'HEADER'">
+      <app-header></app-header>
+    </div>
+
+    <div *ngSwitchCase="'IMAGE'">
+      <app-image></app-image>
+    </div>
+
+    <div *ngSwitchCase="'HTML'">
+      <app-widget-html></app-widget-html>
+    </div>
+
+    <div *ngSwitchCase="'TEXT'">
+      <app-widget-text></app-widget-text>
+    </div>
+
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
