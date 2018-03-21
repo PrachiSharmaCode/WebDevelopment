@@ -5,7 +5,7 @@
   <div class="container-fluid">
     <!--Left arrow-->
     <p class="navbar-text pull-left">
-      <a class="navbar-link">
+      <a routerLink="/profile/{{userId}}/website/{{webId}}/page/{{pageId}}/widget"  class="navbar-link">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
     </p>
@@ -13,7 +13,7 @@
         <!--heading on the nav bar-->
         <p class="navbar-header pull-left">
             <a class="navbar-brand thick">
-                <b>Widget Edit</b>
+                <b>HTML Widget Edit</b>
             </a>
         </p>
         </span>
@@ -28,7 +28,7 @@
 </nav>
 
 
-<div class="container">
+<div class="container mypadding">
 
   <form novalidate name="model.myform">
     <div class="form-group">
@@ -59,8 +59,7 @@
   </form>
   <p></p>
 
-  <a class="btn btn-danger btn-block "
-     ng-click="model.deleteWidget(model.widget)">Delete</a>
+  <a (click)="deleteWidget()" class="btn btn-danger  btn-block">Delete</a>
 
 </div>
 

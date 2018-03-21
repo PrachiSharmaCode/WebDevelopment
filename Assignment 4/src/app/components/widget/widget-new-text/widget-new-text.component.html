@@ -2,18 +2,18 @@
   <div class="container-fluid row">
 
     <div class="navbar-text pull-left">
-      <a routerLink="/profile/{{userId}}/website/{{webId}}/page/{{pageId}}/widget" class="cl-text-black cl-icon-padding">
+      <a routerLink="/profile/{{user._id}}/website/{{website._id}}/page/{{page._id}}/widget/new" class="cl-text-black cl-icon-padding">
           <span class="glyphicon glyphicon-chevron-left">
           </span>
       </a>
     </div>
     <a class="navbar-brand cl-text-white cl-text-bold" href="#">
-      Header Widgets Edit
+      TEXT
     </a>
   </div>
 </nav>
 
-<div class="container">
+<div class="container mypadding">
 
   Text
   <input [(ngModel)]="text" class="form-control"/>

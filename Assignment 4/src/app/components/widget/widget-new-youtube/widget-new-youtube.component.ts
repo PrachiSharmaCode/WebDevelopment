@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Website} from '../../../model/website.model.client';
 import {Page} from '../../../model/page.model.client';
 import {Widget} from '../../../model/widget.model.client';
@@ -28,13 +28,15 @@ export class WidgetNewYoutubeComponent implements OnInit {
   id: String = (new Date()).getTime() + '';
 
   constructor(private userService: UserService, private websiteService: WebsiteService, private pageService: PageService,
-              private widgetService: WidgetService, private router: Router, private activatedRoute: ActivatedRoute) { }
+              private widgetService: WidgetService, private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
   createWidget() {
     this.activatedRoute.params.subscribe(params => {
       this.pageId = params['pid'];
       return this.widgetService.createWidget
-      (this.pageId, this.widget = new Widget(this.id, 'YOUTUBE', this.page._id, '0', this.text, '100%', this.src)).subscribe(
+      (this.pageId, this.widget = new Widget(this.id, 'YOUTUBE', this.page._id, '0', this.text, '100%',
+        this.src, '0', 'name', 'place', 'false')).subscribe(
         (widget: Widget[] = []) => {
           this.widgets = widget;
           if (widget) {

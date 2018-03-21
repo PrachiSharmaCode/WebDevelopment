@@ -37,6 +37,7 @@ import { WidgetNewImageComponent } from './components/widget/widget-new-image/wi
 import { WidgetHtmlComponent } from './components/widget/widget-html/widget-html.component';
 import { WidgetTextComponent } from './components/widget/widget-text/widget-text.component';
 import { WidgetNewTextComponent } from './components/widget/widget-new-text/widget-new-text.component';
+import { WidgetNewHtmlComponent } from './components/widget/widget-new-html/widget-new-html.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { WidgetNewTextComponent } from './components/widget/widget-new-text/widg
     WidgetNewImageComponent,
     WidgetHtmlComponent,
     WidgetTextComponent,
-    WidgetNewTextComponent
+    WidgetNewTextComponent,
+    WidgetNewHtmlComponent
 
   ],
   imports: [

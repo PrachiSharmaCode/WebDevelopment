@@ -32,7 +32,7 @@ export class WidgetService {
     });
   }
 
-  findImage(imageName: String) {
+  uploadImageByImagename(imageName: String) {
     const url = this.baseUrl + '/api/image/' + imageName;
     return this.http.get(url).map(
       (res: Response) => {

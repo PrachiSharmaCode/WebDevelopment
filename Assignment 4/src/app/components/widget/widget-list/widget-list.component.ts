@@ -12,6 +12,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {environment} from '../../../../environments/environment';
 
 
+
 @Component({
   selector: 'app-widget-list',
   templateUrl: './widget-list.component.html',
@@ -77,7 +78,14 @@ export class WidgetListComponent implements OnInit {
       }
     );
   }
+
+  getURL(url: string) {
+    const urlSegments = url.split('/');
+    const embeddedUrl = 'https://www.youtube.com/embed/' + urlSegments.pop();
+    return this.domSanitizer.bypassSecurityTrustResourceUrl(embeddedUrl);
+  }
 }
+
 
 @Pipe({name: 'safe'})
 export class SafePipeComponent implements PipeTransform {

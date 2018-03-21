@@ -10,17 +10,14 @@ module.exports = function(app, models){
   app.get("/api/widget/:widgetId", findWidgetById);
   app.put("/api/widget/:widgetId", updateWidgteById);
 
-  app.get("/api/image/:imageName", findImage);
+  app.get("/api/image/:imageName", uploadImageByImagename);
 
-  function findImage(req, res) {
+  function uploadImageByImagename(req, res) {
     var imageName = req.params.imageName;
     res.sendFile(path.resolve("./assignment/uploads/" + imageName));
   }
 
-  // app.get("/uploads/", (req, res) => {
-  //   res.send('hello')
-  //   res.sendFile(__dirname+"/../../src/assets/uploads/e9b61a2c6196b68f3c5afacc30d8b386")
-  // })
+
   app.post ("/api/upload", upload.single('myFile'), uploadImage);
 
   var WIDGETS = [
@@ -28,12 +25,12 @@ module.exports = function(app, models){
       text: "This is a iframe", url: "https://www.youtube.com/embed/zJAOtGUAKYY",
       width:"100%",rows:0, name: "name", placeholder: "text here",formatted:false},
 
-    { _id: "705", widgetType: "TEXT", pageId:"321", size: 1,
-      text: "This is a image", url: "",
+    { _id: "706", widgetType: "TEXT", pageId:"321", size: 1,
+      text: "This is a TEXT", url: "",
       width:"100%",rows:2, name: "name", placeholder: "text here",formatted:true},
 
     { _id: "705", widgetType: "HTML", pageId:"321", size: 1,
-      text: "This is a image", url: "",
+      text: "This is a HTML", url: "",
       width:"100%",rows:2, name: "name", placeholder: "text here",formatted:false},
 
     { _id: "654", widgetType: "HEADER", pageId:"111",size: 1,
@@ -90,7 +87,6 @@ module.exports = function(app, models){
         text: "This is a iframe", url: filename,
         width:"100%",rows:0, name: "name", placeholder: "text here",formatted:false};
 
-
       WIDGETS.push(wid);
     }
     else{
@@ -98,6 +94,8 @@ module.exports = function(app, models){
     }
 
     var callbackUrl = "https://cs5610-prachisharma.herokuapp.com/profile/"+userId+"/website/"+websiteId+"/page/" + pageId + "/widget";
+
+    //var callbackUrl = "http://localhost:4200/profile/"+userId+"/website/"+websiteId+"/page/" + pageId + "/widget";
 
     res.redirect(callbackUrl);
   }
