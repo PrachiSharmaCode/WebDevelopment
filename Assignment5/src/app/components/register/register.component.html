@@ -1,0 +1,30 @@
+=
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<form>
+  <h2>Register</h2>
+
+  <div class="divStyle">
+    <input type="text" class="form-control"  [(ngModel)]="username" [ngModelOptions]="{standalone: true}"
+           placeholder="Username">
+  </div>
+  <div class="divStyle">
+    <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}"
+           placeholder="Password" >
+  </div>
+  <div class="divStyle">
+    <input type="text" class="form-control"  [(ngModel)]="email" [ngModelOptions]="{standalone: true}"
+           placeholder="email">
+  </div>
+  <div class="divStyle">
+    <input type="text" class="form-control" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}"
+           placeholder="First Name" >
+  </div>
+  <div class="divStyle">
+    <input type="text" class="form-control" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}"
+           placeholder="Last Name">
+  </div>
+  <a (click)="Register()" class="btn btn-primary btn-lg btn-block">Register</a>
+</form>
+

@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{userId}}/website/{{WebId}}/page" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="updatePage()" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" href="#">
+      Edit Page
+    </a>
+  </div>
+</nav>
+
+<div class="container mypadding">
+  <form>
+    <div class="form-group">
+      <label for="page-name">Name</label>
+      <input type="text" class="form-control" id="page-name" [(ngModel)]=page.name [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="page-title">Title</label>
+      <input type="text" class="form-control" id="page-title" [(ngModel)]=page.title [ngModelOptions]="{standalone: true}">
+    </div>
+  </form>
+  <a (click)="deletePage()" class="btn btn-danger  btn-block">Delete</a>
+</div>
+
+<nav class="navbar navbar-fixed-bottom cl-blue-navbar">
+  <div class="container-fuild">
+    <a (click)="profile()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+  </div>
+</nav>
