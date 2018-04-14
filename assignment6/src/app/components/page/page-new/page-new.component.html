@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{userId}}/website/{{WebId}}/page" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a (click)="createPage()" class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" href="#">
+      New Page
+    </a>
+  </div>
+</nav>
+
+<div *ngIf="error"
+     class="alert alert-danger mypadding container">
+  {{errorMsg}}
+</div>
+
+<div class="container mypadding">
+  <form>
+    <div class="form-group">
+      <label for="page-name">Name</label>
+      <input type="text" class="form-control" id="page-name" placeholder="Page Name" [(ngModel)]="name"
+             [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+      <label for="page-title">Title</label>
+      <input type="text" class="form-control" id="page-title" placeholder="Page Title" [(ngModel)]="title"
+             [ngModelOptions]="{standalone: true}">
+    </div>
+  </form>
+</div>
+
+<nav class="navbar navbar-fixed-bottom cl-blue-navbar">
+  <div class="container-fuild">
+    <a (click)="profile()" class="navbar-link navbar-text pull-right cl-text-white cl-icon-padding">
+      <span class="glyphicon glyphicon-user"></span>
+    </a>
+  </div>
+</nav>
+
+

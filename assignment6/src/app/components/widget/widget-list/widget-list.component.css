@@ -1,0 +1,68 @@
+input{
+  padding-top: 20px;
+}
+
+form{
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Bookman Old Style";
+}
+
+
+.mypadding{
+  padding: 30px;
+}
+
+.divStyle{
+  margin-bottom: 10px;
+}
+
+
+.navTop{
+  background-color:#428BCA;
+  width:100%;
+  position:fixed;
+  top:0px;
+  font-family: "Bookman Old Style";
+}
+
+.cl-list-item-borderless {
+  border-top: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.vl {
+  border-right: 1px solid dimgrey;
+  height: 1000px;
+}
+
+
+.navBottom{
+  background-color:#428BCA;
+  width:100%;
+  height:50px;
+  position:fixed;
+  padding-right: 20px;
+  bottom:0px;
+}
+
+.editLink{
+  margin-right: 300px;
+}
+
+.navColor{
+  color: aliceblue;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.listPoint{
+  margin-top: 20px;
+  margin-left: 20px;
+  list-style-type: none;
+}

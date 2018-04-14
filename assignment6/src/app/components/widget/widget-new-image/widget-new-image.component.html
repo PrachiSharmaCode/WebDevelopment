@@ -1,0 +1,38 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid row">
+
+    <div class="navbar-text pull-left">
+      <a routerLink="/profile/{{userId}}/website/{{webId}}/page/{{pageId}}/widget" class="cl-text-black cl-icon-padding">
+          <span class="glyphicon glyphicon-chevron-left">
+          </span>
+      </a>
+    </div>
+    <div class="navbar-text pull-right">
+      <a class="cl-icon-padding cl-text-black">
+          <span class="glyphicon glyphicon-ok">
+          </span>
+      </a>
+    </div>
+    <a class="navbar-brand cl-text-white cl-text-bold" href="#">
+      Image Widgets Edit
+    </a>
+  </div>
+</nav>
+
+<div class="mypadding">
+  <form ngNoForm action="https://cs5610-prachisharma.herokuapp.com/api/upload" method="post" enctype="multipart/form-data">
+  <!--<form ngNoForm action="http://localhost:3100/api/upload" method="post" enctype="multipart/form-data">-->
+    <input  name="myFile"   type="file" class="form-control"/>
+    <input  name="widgetId" value="{{id}}"   style="display: none"/>
+    <input  name="websiteId" value="{{webId}}"   style="display: none"/>
+    <input  name="pageId" value="{{pageId}}"   style="display: none"/>
+    <input  name="userId" value="{{userId}}"   style="display: none"/>
+    <button  class="mypadding" type="submit" class="btn btn-block btn-primary">Upload Image</button>
+    <br/>
+  </form>
+</div>
+
+
+
+

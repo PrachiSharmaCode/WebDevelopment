@@ -18,6 +18,14 @@ function updateUser(userId,user) {
   return UserModel.updateOne({_id:userId},user)
 }
 
+function deleteUser(userId,user){
+  return USerModel.deleteOne({_id:userId},user)
+}
+
+function findByUsername(name){
+  return UserModel.find({username: name})
+}
+
 function findUserByCredentials(username, password) {
   return UserModel.findOne({username: username,password: password})
 }
