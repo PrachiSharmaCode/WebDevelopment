@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <button (click)="addReview()" type="button" class="btn btn-outline-warning navbar-right" style="margin-right: 40px">Done</button>
+  <button (click)="SignOut()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Log Out</button>
+</nav>
+
+<div class="shadow center listformat">
+  <form>
+    <div class="form-group">
+      <h4>Review {{truck.name}}</h4>
+      <textarea id="truck-" class="form-control" rows="4" placeholder="Give your review here......"
+                [(ngModel)]=review [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+  </form>
+</div>

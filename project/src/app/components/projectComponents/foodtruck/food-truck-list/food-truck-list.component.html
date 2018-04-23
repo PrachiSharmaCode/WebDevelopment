@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <button (click)="addTruck()" type="button" class="btn btn-outline-warning navbar-right" style="margin-right: 40px">Add New Truck</button>
+  <button (click)="SignOut()" type="button" class="btn btn-outline-light navbar-right" style="margin-right: 40px">Log Out</button>
+
+</nav>
+
+<div class="list-group center">
+    <div *ngFor = "let truck of trucks">
+
+      <a href="/owner/{{uid}}/trucks/{{truck._id}}" class="list-group-item list-group-item-action flex-column align-items-start listformat shadow" style="margin: 20px">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{truck.name}}</h5>
+        <small>{{truck.location}}, {{truck.city}}</small>
+      </div>
+      <p class="mb-1">From: {{truck.from}} To: {{truck.to}}</p>
+      <small>{{truck.cusineType}}</small>
+    </a>
+
+  </div>
+</div>
+
+
+
+

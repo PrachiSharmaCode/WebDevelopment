@@ -1,0 +1,60 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <button (click)="updateTruck()" type="button" class="btn btn-outline-success navbar-btn">Update Truck</button>
+  <button (click)="deleteTrcuk()" type="button" class="btn btn-outline-danger navbar-btn ">Delete Truck</button>
+  <button (click)="SignOut()" type="button" class="btn btn-outline-light navbar-btn navbar-right" style="margin-right: 40px">Log Out</button>
+</nav>
+
+  <div class="shadow center listformat">
+    <form>
+      <div class="form-group">
+        <h4>Food Truck Name</h4>
+        <input type="text" class="form-control" placeholder="Blogger"  [(ngModel)]=truck.name  [ngModelOptions]="{standalone: true}">
+      </div>
+      <div class="form-group">
+        <h4>Food Trcuk Location</h4>
+        <textarea  class="form-control" rows="2"
+                  [(ngModel)]=truck.location [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+      <div class="form-group">
+        <h4>Food Truck City</h4>
+        <textarea  class="form-control" rows="2"
+                   [(ngModel)]=truck.city [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+      <div class="form-group">
+        <h4>Food Truck Pin Code</h4>
+        <textarea class="form-control" rows="2"
+                  [(ngModel)]=truck.pincode [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h4>Food Truck Cusine Type</h4>
+        <textarea id="truck-" class="form-control" rows="2"
+                  [(ngModel)]=truck.cusineType [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+
+      <div class="form-group">
+        <h4>Food Truck Time</h4>
+        <h6>From</h6>
+        <textarea class="form-control" rows="2"
+                  [(ngModel)]=truck.from [ngModelOptions]="{standalone: true}"></textarea>
+        <h6>To</h6>
+        <textarea class="form-control" rows="2"
+                  [(ngModel)]=truck.to [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+
+      <h5>Contact Details</h5>
+      <div class="form-group">
+        <h4>Email </h4>
+        <textarea  class="form-control" rows="2"
+                  [(ngModel)]=user.email [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+      <div class="form-group">
+        <h4>Phone Number </h4>
+        <textarea  class="form-control" rows="2"
+                   [(ngModel)]=user.phone [ngModelOptions]="{standalone: true}"></textarea>
+      </div>
+    </form>
+  </div>
+
+

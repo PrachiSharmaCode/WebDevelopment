@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark bg-dark">
+  <h2>The Food Truck Web</h2>
+    <button (click)="SignOut()" type="button" class="btn btn-outline-light navbar-btn navbar-right" style="margin-right: 40px">Log Out</button>
+</nav>
+
+<div class="mypadding center shadow" style="alignment: center">
+  <form >
+    <h2 align="center">Search Food Truck By:</h2>
+    <div class="divStyle">
+      <h3>Name</h3>
+      <input type="text" class="form-control" placeholder="search by Username" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Cusine Type</h3>
+      <input type="text" class="form-control"  placeholder="search by Cusine Tyoe" [(ngModel)]="cusineType" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>City</h3>
+      <input type="text" class="form-control"  placeholder="search by City"[(ngModel)]="city" [ngModelOptions]="{standalone: true}" >
+    </div>
+    <div class="divStyle">
+      <h3>Pin Code</h3>
+      <input type="text" class="form-control"  placeholder="search by pincode" [(ngModel)]="pincode" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>location</h3>
+      <input type="text" class="form-control"  placeholder="search by street" [(ngModel)]="location" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button (click)="searchTruck()" style="margin-top: 30px" type="submit" class="btn btn-success btn-lg btn-block" formaction="profile">Search</button>
+  </form>
+
+</div>
+
+

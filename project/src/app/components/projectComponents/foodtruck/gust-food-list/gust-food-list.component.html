@@ -1,0 +1,30 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <button (click)=" signIn()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Log In</button>
+</nav>
+
+<div class="list-group center" *ngIf="trucks?.length > 0">
+  <div *ngFor = "let truck of trucks">
+
+    <div *ngFor = "let tr of truck">
+
+      <a (click)="notaUser()" class="list-group-item list-group-item-action flex-column align-items-start listformat shadow">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{tr.name}}</h5>
+          <small>{{tr.location}}, {{tr.city}}</small>
+        </div>
+        <p class="mb-1">From: {{tr.from}} To: {{tr.to}}</p>
+        <small>{{tr.cusineType}}</small>
+      </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+

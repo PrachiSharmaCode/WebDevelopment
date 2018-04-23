@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <p>Already have an account?
+    <button (click)="signIn()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Sign In</button>
+  </p>
+</nav>
+
+<div class="mypadding center" style="alignment: center">
+
+  <button (click)="goToAdminRegistration()" style="margin-top: 30px" type="submit" class=" buttonstyle btn btn-success shadow" formaction="profile">Do you own a Food Truck?</button>
+
+  <h3 align="center" class="or"> or </h3>
+  <button (click)="goToUserRegistration()" style="margin-top: 30px" type="submit" class=" buttonstyle btn btn-success shadow" formaction="profile">Looking for Lunch?</button>
+
+</div>
+
+

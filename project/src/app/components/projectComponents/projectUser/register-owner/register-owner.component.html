@@ -1,0 +1,51 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <p>Already have an account?
+    <button (click)="signIn()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Sign In</button>
+  </p>
+</nav>
+
+<div *ngIf="error"
+     class="alert alert-danger">
+  {{error}}
+</div>
+
+<div class="center shadow" style="alignment: center">
+  <form (ngSubmit)="Register()" #f="ngForm">
+    <h4 align="center">Click next to add your FOOD TRUCK</h4>
+    <div class="divStyle">
+      <h3>Username</h3>
+      <input type="text" class="form-control" placeholder="enter Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Password</h3>
+      <input type="password" class="form-control"  placeholder="enter password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Verify Password</h3>
+      <input type="password" class="form-control"  placeholder="enter password" [(ngModel)]="vpassword" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>First Name</h3>
+      <input type="text" class="form-control"  placeholder="enter your First Name"[(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" >
+    </div>
+    <div class="divStyle">
+      <h3>Last Name</h3>
+      <input type="text" class="form-control"  placeholder="enter your Last Name" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Email</h3>
+      <input type="text" class="form-control"  placeholder="enter your email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Phone</h3>
+      <input type="text" class="form-control"  placeholder="enter your phone number" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit"
+            [disabled]="!f.valid" style="margin-top: 30px" type="submit" class="btn btn-success btn-lg btn-block"
+            formaction="profile">NEXT ></button>
+  </form>
+
+</div>
+
+

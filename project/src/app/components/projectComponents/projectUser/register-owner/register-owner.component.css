@@ -1,0 +1,42 @@
+.navTop{
+  background-color: #343a40;
+  width:100%;
+  color: floralwhite;
+  position:fixed;
+  top:0px;
+  padding-left: 30px;
+  font-family: "Bookman Old Style";
+  box-shadow: 5px 10px 18px black
+
+}
+
+mypadding{
+  padding: 20px;
+}
+
+.center {
+  margin: auto;
+  margin-top: 40px;
+  width: 50%;
+  height: 80%;
+  background-color: #343a40;
+  padding: 10px;
+}
+
+form{
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Bookman Old Style";
+  color: floralwhite;
+}
+
+.shadow{
+  box-shadow: 10px 20px 38px #71423f;
+}
+
+.navbar{
+  color: floralwhite;
+  font-family: "Bookman Old Style";
+}
+

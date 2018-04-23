@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    <button  (click)="searchTruck()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Food Truck</button>
+  </form>
+  <button (click)="signIn()" type="button" class="btn btn-outline-light navbar-btn navbar-right" style="margin-right: 40px">Sign In</button>
+</nav>
+
+<div class="back">
+
+<div id="demo" class="carousel slide shadow" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner center">
+    <div class="carousel-item active">
+      <img src="../../../../assets/food.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="../../../../assets/foodoftruk.jpg" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img src="../../../../assets/truck.png" alt="New York">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+
+
+
+  <div align="center" class="join">
+
+    <h1> Join Us!</h1>
+    <button (click)="signUp()" type="button" class="btn btn-outline-success">Sign Up</button>
+
+  </div>
+
+</div>
+
+

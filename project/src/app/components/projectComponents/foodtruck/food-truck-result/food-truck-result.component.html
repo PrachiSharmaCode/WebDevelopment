@@ -1,0 +1,43 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <button (click)="SignOut()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Log Out</button>
+</nav>
+
+<!--<div class="list-group center">-->
+  <!--<div *ngFor = "let truck of trucks">-->
+
+    <!--<a href="/search/{{uid}}/trucks/{{truck._id}}" class="list-group-item list-group-item-action flex-column align-items-start listformat shadow">-->
+      <!--<div class="d-flex w-100 justify-content-between">-->
+        <!--<h5 class="mb-1">{{truck.name}}</h5>-->
+        <!--<small>{{truck.location}}, {{truck.city}}</small>-->
+      <!--</div>-->
+      <!--<p class="mb-1">From: {{truck.from}} To: {{truck.to}}</p>-->
+      <!--<small>{{truck.cusineType}}</small>-->
+    <!--</a>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+<div class="list-group center">
+  <div *ngFor = "let truck of trucks">
+
+    <div *ngFor = "let tr of truck">
+
+      <a href="/search/{{uid}}/trucks/{{tr._id}}" class="list-group-item list-group-item-action flex-column align-items-start listformat shadow" style="margin: 10px">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{tr.name}}</h5>
+          <small>{{tr.location}}, {{tr.city}}</small>
+        </div>
+        <p class="mb-1">From: {{tr.from}} To: {{tr.to}}</p>
+        <small>{{tr.cusineType}}</small>
+      </a>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+

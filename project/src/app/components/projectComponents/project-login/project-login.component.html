@@ -1,0 +1,24 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+  <p>Do not have an account?
+    <button (click)="goToSignUp()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Sign Up</button>
+  </p>
+</nav>
+
+<div class="mypadding center shadow" style="alignment: center">
+  <form (ngSubmit) = "login()" #f="ngForm">
+    <h2 align="center">Login</h2>
+    <div class="divStyle">
+      <h3>Username</h3>
+      <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Password</h3>
+      <input type="password" class="form-control"  placeholder="Password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="submit"
+            [disabled]="!f.valid" style="margin-top: 30px" type="submit" class="btn btn-success btn-lg btn-block" formaction="profile">Login</button>
+  </form>
+</div>
+
+

@@ -1,0 +1,50 @@
+<nav class="navbar navbar-dark bg-dark shadow">
+  <h2>The Food Truck Web</h2>
+
+  <button (click)="SignOut()" type="button" class="btn btn-light navbar-btn navbar-right" style="margin-right: 40px">Log Out</button>
+</nav>
+
+<div class="center shadow" style="alignment: center">
+  <form>
+    <h4 align="center">Click next to add your FOOD TRUCK</h4>
+    <div class="divStyle">
+      <h3>Name</h3>
+      <input type="text" class="form-control" placeholder="Food Truck's name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Location</h3>
+      <input type="text" class="form-control" placeholder="enter Street address" [(ngModel)]="location" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>City</h3>
+      <input type="text" class="form-control" placeholder="enter city name" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Pin Code</h3>
+      <input type="text" class="form-control" placeholder="enter pin code" [(ngModel)]="pincode" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Time</h3>
+      <input type="text" class="form-control" placeholder="From (please enter am/pm with time)" [(ngModel)]="from" [ngModelOptions]="{standalone: true}">
+      <input type="text" class="form-control" placeholder="To (please enter am/pm with time)" [(ngModel)]="to" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="divStyle">
+      <h3>Cusine Type</h3>
+      <input type="text" class="form-control" placeholder="enter cusine type" [(ngModel)]="cusineType" [ngModelOptions]="{standalone: true}">
+    </div>
+    <br>
+    <h3>Mark your Food Truck</h3>
+    <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="ChooseLocation($event)">
+      <agm-marker [latitude]="lat" [longitude]="lng" *ngIf="locationChoosen">
+
+      </agm-marker>
+
+    </agm-map>
+    <button (click)="registerFoodTruck()" style="margin-top: 30px" type="submit"
+            class="btn btn-success btn-lg btn-block" formaction="profile">Done >
+    </button>
+  </form>
+
+
+
+</div>
