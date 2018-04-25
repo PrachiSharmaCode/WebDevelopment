@@ -1,6 +1,6 @@
 # WebDevelopment
 
-# admin Login
+## admin Login
 
 username: admin passsword: admin
 
@@ -16,5 +16,12 @@ username: admin passsword: admin
 ## searching truck after user lohin
 
 
-name: Spice On Curve    &
-city: Boston
+- 1st search 
+  name: Spice On Curve    
+  city: Boston
+  
+- 2st search 
+  Cusine Type: Thai   
+  location: Terry & Thomas
+ 
+
