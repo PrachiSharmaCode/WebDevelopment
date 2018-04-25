@@ -19,9 +19,14 @@ username: admin passsword: admin
 ## 1st search 
  name: Spice On Curve    
  city: Boston
+ 
   
 ## 2st search 
    Cusine Type: Thai   
   location: Terry & Thomas
+ 98078
  
+ ## 3rd search 
+  city : Seattle 
+  pincode: 98078
 
