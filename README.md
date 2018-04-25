@@ -16,12 +16,12 @@ username: admin passsword: admin
 # searching truck after user lohin
 
 
-- 1st search 
-  name: Spice On Curve    
-  city: Boston
+## 1st search 
+ name: Spice On Curve    
+ city: Boston
   
-- 2st search 
-  Cusine Type: Thai   
+## 2st search 
+   Cusine Type: Thai   
   location: Terry & Thomas
  
 
