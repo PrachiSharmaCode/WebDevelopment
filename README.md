@@ -1,19 +1,19 @@
 # WebDevelopment
 
-** admin Login
+**admin Login
 
 username: admin passsword: admin
 
 
-** user login
+**user login
 
-username: alice password: alice     &  
+-username: alice password: alice
 
-username: bob password: bob
+-username: bob password: bob
 
 
 
-** searching truck after user lohin
+**searching truck after user lohin
 
 
 name: Spice On Curve    &
